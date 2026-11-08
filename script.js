@@ -21,7 +21,7 @@ document.getElementById("openBtn").addEventListener("click", () => {
 function showerPetals() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const box = document.getElementById("petals");
-  const colors = ["#c8233a", "#a3182c", "#ee8a12", "#f6b51b", "#e05570"];
+  const colors = ["#d4af37", "#f1d98a", "#b8862b", "#c8233a", "#e3a21e", "#fbe7a1"];
   for (let i = 0; i < 36; i++) {
     const p = document.createElement("span");
     p.className = "petal";
