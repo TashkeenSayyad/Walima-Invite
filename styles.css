@@ -53,7 +53,7 @@ body.locked { overflow: hidden; }
   box-shadow: 0 30px 60px -30px rgba(120, 100, 60, .25);
   animation: rise 1.2s ease both;
 }
-.opening-card .script { font-size: clamp(56px, 16vw, 84px); color: var(--gold); line-height: 1.1; margin: 4px 0 6px; }
+.opening-card .script { font-size: clamp(46px, 13vw, 68px); color: var(--gold); line-height: 1.15; margin: 4px 0 6px; }
 .opening-date { font-family: var(--sans); letter-spacing: .4em; font-size: 13px; color: var(--muted); margin-bottom: 32px; }
 
 /* ---------- Typography ---------- */
@@ -316,4 +316,44 @@ body.locked { overflow: hidden; }
   .section { padding: 64px 16px; }
   .map-wrap iframe { height: 280px; }
   .btn { width: 100%; max-width: 320px; }
+}
+
+/* ---------- Couple names ---------- */
+.opening-card .script .amp { font-size: .6em; color: var(--muted); }
+.opening-sub {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 10px;
+}
+.couple { margin: 14px 0 6px; }
+.couple .name {
+  font-size: clamp(52px, 13vw, 84px);
+  color: var(--ink);
+  line-height: 1.15;
+}
+.amp-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--gold);
+  font-style: italic;
+  font-size: clamp(24px, 6vw, 32px);
+}
+.amp-line::before, .amp-line::after {
+  content: "";
+  width: clamp(40px, 14vw, 80px);
+  height: 1px;
+  background: var(--line);
+}
+.from {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 6px;
 }

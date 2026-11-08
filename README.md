@@ -5,6 +5,7 @@ A white-themed, single-page invitation website for the Walima reception.
 - **Date:** Tuesday, 29 December 2026
 - **Time:** 8:00 PM (PKT)
 - **Venue:** Zam Zam Diamond Hall, Thatta
+- **Couple:** Tashkeen & Anusha
 
 ## Features
 
@@ -29,4 +30,4 @@ In the repository settings, go to **Pages**, choose **Deploy from a branch**, se
 
 ## Customising
 
-Names, wording and colours live in `index.html` and `styles.css` (colour tokens at the top under `:root`). Event times are in `script.js`.
+Wording and colours live in `index.html` and `styles.css` (colour tokens at the top under `:root`). Event times are in `script.js`.
