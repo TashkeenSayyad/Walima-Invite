@@ -14,7 +14,29 @@ document.getElementById("openBtn").addEventListener("click", () => {
   opening.classList.add("hidden");
   document.body.classList.remove("locked");
   revealVisible();
+  showerPetals();
 });
+
+/* ---------- Rose & marigold petal shower ---------- */
+function showerPetals() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const box = document.getElementById("petals");
+  const colors = ["#c8233a", "#a3182c", "#ee8a12", "#f6b51b", "#e05570"];
+  for (let i = 0; i < 36; i++) {
+    const p = document.createElement("span");
+    p.className = "petal";
+    const dur = 5 + Math.random() * 5;
+    p.style.left = `${Math.random() * 100}%`;
+    p.style.background = colors[i % colors.length];
+    p.style.animationDuration = `${dur}s`;
+    p.style.animationDelay = `${Math.random() * 2.5}s`;
+    p.style.setProperty("--drift", `${(Math.random() - 0.5) * 160}px`);
+    p.style.setProperty("--spin", `${360 + Math.random() * 540}deg`);
+    p.style.transform = `scale(${0.6 + Math.random() * 0.7})`;
+    box.appendChild(p);
+  }
+  setTimeout(() => (box.innerHTML = ""), 13000);
+}
 
 /* ---------- Reveal on scroll ---------- */
 const reveals = document.querySelectorAll(".reveal");

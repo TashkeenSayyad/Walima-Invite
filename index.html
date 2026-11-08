@@ -10,34 +10,51 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Opening envelope -->
+  <!-- Opening card -->
   <div class="opening" id="opening" role="dialog" aria-label="Open invitation">
     <div class="opening-card">
-      <svg class="ornament" viewBox="0 0 120 40" aria-hidden="true"><use href="#flourish"/></svg>
-      <p class="eyebrow">You are invited</p>
+      <svg class="garland garland-card" aria-hidden="true"><rect width="100%" height="100%" fill="url(#garland)"/></svg>
+      <p class="urdu urdu-heading">دعوت نامہ</p>
+      <div class="seal" aria-hidden="true"><span>T</span><i>&amp;</i><span>A</span></div>
+      <p class="eyebrow">You are invited to the Walima of</p>
       <h1 class="script">Tashkeen <span class="amp">&amp;</span> Anusha</h1>
-      <p class="opening-sub">Walima</p>
       <p class="opening-date">29 · 12 · 2026</p>
       <button class="btn btn-solid" id="openBtn" type="button">Open Invitation</button>
     </div>
   </div>
 
+  <!-- Top marigold garland -->
+  <svg class="garland garland-top" aria-hidden="true"><rect width="100%" height="100%" fill="url(#garland)"/></svg>
+
   <main>
     <!-- Hero -->
     <section class="hero">
-      <div class="frame">
-        <span class="corner tl"></span><span class="corner tr"></span>
-        <span class="corner bl"></span><span class="corner br"></span>
+      <!-- Hanging marigold strings -->
+      <div class="laris laris-left" aria-hidden="true">
+        <svg style="height:52%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
+        <svg style="height:34%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
+        <svg style="height:20%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
+      </div>
+      <div class="laris laris-right" aria-hidden="true">
+        <svg style="height:20%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
+        <svg style="height:34%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
+        <svg style="height:52%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
+      </div>
+
+      <div class="arch">
+        <svg class="finial" viewBox="0 0 60 60" aria-hidden="true"><use href="#finial"/></svg>
+        <svg class="kairi-corner bl" viewBox="0 0 64 64" aria-hidden="true"><use href="#kairi"/></svg>
+        <svg class="kairi-corner br" viewBox="0 0 64 64" aria-hidden="true"><use href="#kairi"/></svg>
 
         <p class="bismillah" lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-        <p class="eyebrow reveal">With the blessings of Allah ﷻ</p>
-        <p class="lead reveal">we request the honour of your presence at the</p>
+        <p class="urdu urdu-title reveal" lang="ur" dir="rtl">دعوتِ ولیمہ</p>
+        <svg class="divider reveal" viewBox="0 0 200 30" aria-hidden="true"><use href="#kairi-divider"/></svg>
+        <p class="lead reveal">With the blessings of Allah ﷻ and the duas of our elders,<br>we request the pleasure of your company at the</p>
         <h2 class="script title reveal">Walima Reception</h2>
-        <svg class="ornament reveal" viewBox="0 0 120 40" aria-hidden="true"><use href="#flourish"/></svg>
         <p class="lead reveal">celebrating the blessed union of</p>
         <div class="couple reveal">
           <p class="name script">Tashkeen</p>
@@ -56,7 +73,19 @@
         </div>
 
         <p class="venue-line reveal">Zam Zam Diamond Hall · Thatta</p>
+        <p class="inshallah reveal">— Insha’Allah —</p>
       </div>
+    </section>
+
+    <!-- Urdu invitation -->
+    <section class="section urdu-section">
+      <svg class="divider" viewBox="0 0 200 30" aria-hidden="true"><use href="#kairi-divider"/></svg>
+      <p class="urdu urdu-body reveal" lang="ur" dir="rtl">
+        شادی خانہ آبادی کی پُرمسرت تقریب کے موقع پر<br>
+        دعوتِ ولیمہ میں آپ کی شرکت<br>
+        ہمارے لیے باعثِ مسرت و افتخار ہوگی
+      </p>
+      <p class="urdu urdu-small reveal" lang="ur" dir="rtl">آپ کی آمد کے منتظر</p>
     </section>
 
     <!-- Countdown -->
@@ -72,21 +101,24 @@
     </section>
 
     <!-- Details -->
-    <section class="section">
+    <section class="section details">
       <h3 class="section-title">Event Details</h3>
       <div class="cards">
         <article class="card reveal">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <p class="urdu card-urdu" lang="ur">تاریخ</p>
           <h4>Date</h4>
           <p>Tuesday<br>29 December 2026</p>
         </article>
         <article class="card reveal">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <p class="urdu card-urdu" lang="ur">وقت</p>
           <h4>Time</h4>
           <p>8:00 PM<br>Dinner to follow</p>
         </article>
         <article class="card reveal">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <p class="urdu card-urdu" lang="ur">مقام</p>
           <h4>Venue</h4>
           <p>Zam Zam Diamond Hall<br>Thatta, Sindh</p>
         </article>
@@ -110,30 +142,103 @@
 
     <!-- Dua -->
     <section class="section dua">
-      <svg class="ornament" viewBox="0 0 120 40" aria-hidden="true"><use href="#flourish"/></svg>
+      <svg class="divider" viewBox="0 0 200 30" aria-hidden="true"><use href="#kairi-divider"/></svg>
       <p class="arabic" lang="ar" dir="rtl">بَارَكَ ٱللَّٰهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
       <p class="translation">“May Allah bless you both, shower His blessings upon you,<br>and unite you both in goodness.”</p>
-      <p class="closing">Your presence and prayers will be the greatest gift.</p>
+      <p class="closing">Your presence and duas will be the greatest gift.</p>
       <p class="script signoff">With love &amp; duas</p>
       <p class="from">Tashkeen &amp; Anusha</p>
     </section>
   </main>
 
   <footer class="footer">
+    <svg class="garland garland-bottom" aria-hidden="true"><rect width="100%" height="100%" fill="url(#garland)"/></svg>
     <p>Tashkeen &amp; Anusha · 29.12.2026 · Thatta</p>
   </footer>
 
-  <!-- Shared SVG flourish -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <!-- Shared SVG art -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="flourish" viewBox="0 0 120 40">
-      <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
-        <path d="M4 20h36M80 20h36"/>
-        <path d="M40 20c6-10 14-10 20 0c6 10 14 10 20 0"/>
-        <path d="M40 20c6 10 14 10 20 0c6-10 14-10 20 0"/>
+    <defs>
+      <!-- Marigold flower -->
+      <g id="genda">
+        <circle r="6" fill="#ee8a12"/>
+        <circle r="6" fill="none" stroke="#d96d0b" stroke-width="1.6" stroke-dasharray="1.6 1.4"/>
+        <circle r="3.8" fill="#f7a91e"/>
+        <circle r="1.6" fill="#d96d0b"/>
       </g>
-      <path d="M60 14l3 6-3 6-3-6z" fill="currentColor"/>
-      <circle cx="4" cy="20" r="1.6" fill="currentColor"/>
-      <circle cx="116" cy="20" r="1.6" fill="currentColor"/>
+      <g id="genda-yellow">
+        <circle r="6" fill="#f6b51b"/>
+        <circle r="6" fill="none" stroke="#e39a0c" stroke-width="1.6" stroke-dasharray="1.6 1.4"/>
+        <circle r="3.8" fill="#fcd04a"/>
+        <circle r="1.6" fill="#e39a0c"/>
+      </g>
+      <path id="leaf" d="M0 0c5-6 13-6 16 0c-3 6-11 6-16 0z" fill="#5f8f3e"/>
+
+      <!-- Swagged garland (toran) -->
+      <pattern id="garland" width="96" height="48" patternUnits="userSpaceOnUse">
+        <path d="M0 6 Q48 52 96 6" fill="none" stroke="#c9a46a" stroke-width="1"/>
+        <use href="#genda" x="12" y="15"/>
+        <use href="#genda-yellow" x="24" y="22"/>
+        <use href="#genda" x="36" y="26"/>
+        <use href="#genda-yellow" x="48" y="28"/>
+        <use href="#genda" x="60" y="26"/>
+        <use href="#genda-yellow" x="72" y="22"/>
+        <use href="#genda" x="84" y="15"/>
+        <use href="#leaf" x="-14" y="6"/>
+        <use href="#leaf" x="80" y="6" transform="rotate(180 88 6)"/>
+        <circle cx="0" cy="6" r="4" fill="#9b1e2e"/>
+        <circle cx="96" cy="6" r="4" fill="#9b1e2e"/>
+      </pattern>
+
+      <!-- Vertical marigold string (lari) -->
+      <pattern id="lari" width="16" height="13" patternUnits="userSpaceOnUse">
+        <line x1="8" y1="0" x2="8" y2="13" stroke="#c9a46a" stroke-width="1"/>
+        <use href="#genda" x="8" y="6.5" transform="scale(1)"/>
+      </pattern>
+    </defs>
+
+    <!-- Paisley / kairi -->
+    <symbol id="kairi" viewBox="0 0 64 64">
+      <g fill="none" stroke="#b8975a" stroke-width="1.4" stroke-linecap="round">
+        <path d="M40 6c14 6 20 26 8 40C38 58 16 60 9 46C3 34 12 22 24 24c10 2 11 14 3 17c-6 2-10-4-6-8"/>
+        <path d="M38 13c9 5 12 19 5 29c-7 10-22 11-28 3" stroke="#9b1e2e" stroke-width="1"/>
+        <path d="M40 6c-4-2-8 0-9 4"/>
+      </g>
+      <g fill="#ee8a12">
+        <circle cx="52" cy="14" r="1.6"/><circle cx="57" cy="24" r="1.6"/>
+        <circle cx="57" cy="36" r="1.6"/><circle cx="50" cy="50" r="1.6"/>
+        <circle cx="38" cy="57" r="1.6"/><circle cx="24" cy="58" r="1.6"/>
+      </g>
+      <circle cx="24" cy="34" r="2" fill="#9b1e2e"/>
+    </symbol>
+
+    <!-- Mehndi divider: mirrored kairis with a flower -->
+    <symbol id="kairi-divider" viewBox="0 0 200 30">
+      <g fill="none" stroke="#b8975a" stroke-width="1" stroke-linecap="round">
+        <path d="M4 15h56M140 15h56"/>
+        <path d="M86 15c-6-10-20-10-22-2c-2 6 6 9 9 4"/>
+        <path d="M86 15c-6 10-20 10-22 2"/>
+        <path d="M114 15c6-10 20-10 22-2c2 6-6 9-9 4"/>
+        <path d="M114 15c6 10 20 10 22 2"/>
+      </g>
+      <g fill="#b8975a"><circle cx="4" cy="15" r="1.6"/><circle cx="196" cy="15" r="1.6"/>
+        <circle cx="30" cy="15" r="1.2"/><circle cx="170" cy="15" r="1.2"/></g>
+      <use href="#genda" x="100" y="15"/>
+      <circle cx="88" cy="15" r="1.8" fill="#9b1e2e"/><circle cx="112" cy="15" r="1.8" fill="#9b1e2e"/>
+    </symbol>
+
+    <!-- Dome finial for the arch -->
+    <symbol id="finial" viewBox="0 0 60 60">
+      <g fill="none" stroke="#b8975a" stroke-width="1.2">
+        <path d="M30 4v8"/>
+        <path d="M30 12c-10 6-16 14-16 24h32c0-10-6-18-16-24z" fill="#ffffff"/>
+        <path d="M10 36h40M14 42h32"/>
+      </g>
+      <circle cx="30" cy="4" r="2.4" fill="#9b1e2e"/>
+      <use href="#genda" x="30" y="27" transform="scale(1)"/>
+      <path d="M22 50c4-4 12-4 16 0" fill="none" stroke="#b8975a" stroke-width="1"/>
     </symbol>
   </svg>
 
