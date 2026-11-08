@@ -85,7 +85,10 @@ audio.addEventListener("pause", syncMusicBtn);
 /* ---------- Opening card ---------- */
 document.body.classList.add("locked");
 $("openBtn").addEventListener("click", () => {
-  $("opening").classList.add("hidden");
+  const opening = $("opening");
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  opening.classList.add("open");
+  setTimeout(() => opening.classList.add("hidden"), reduced ? 0 : 2100);
   document.body.classList.remove("locked");
   $("controls").hidden = false;
   if (CONFIG.music) { audio.load(); audio.play().catch(() => {}); }

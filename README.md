@@ -11,7 +11,12 @@ A white-themed, single-page invitation website for the Walima reception.
 
 - Premium gold-foil styling with English translations under all Arabic & Urdu text
 - Desi shaadi-card styling: marigold garlands, Mughal arch, paisley (kairi) motifs, jaali pattern, Urdu text
-- "Open Invitation" card with a T&A seal and a rose & marigold petal shower
+- "Open Invitation" card with a gold T ✦ A laurel-wreath monogram; palace doors swing open, followed by a rose, marigold & gold-flake shower
+- Couple's names in Sindhi calligraphy (تشڪين ۽ انوشا)
+- Textured gold-foil lettering with twinkling sparkles around the names
+- Swaying golden Mughal lanterns with a warm glow
+- Deep maroon countdown band with an Ajrak-inspired pattern and borders
+- Monogram watermark behind the closing dua
 - Bismillah, invitation text and a Nikah dua
 - Live countdown to the event
 - Event detail cards, Google Maps directions and embedded map
