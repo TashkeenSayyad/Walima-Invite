@@ -7,10 +7,18 @@
   <meta name="description" content="You are cordially invited to the Walima reception of Tashkeen &amp; Anusha on Tuesday, 29 December 2026 at 8:00 PM, Zam Zam Lawn, Thatta.">
   <meta property="og:title" content="Walima · Tashkeen &amp; Anusha">
   <meta property="og:description" content="Tuesday, 29 December 2026 · 8:00 PM · Zam Zam Lawn, Thatta">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tashkeensayyad.github.io/Walima-Invite/">
+  <meta property="og:image" content="https://tashkeensayyad.github.io/Walima-Invite/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Walima invitation of Tashkeen &amp; Anusha in gold under a Mughal arch">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#fffdf8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital@0;1&family=Great+Vibes&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,8 +27,9 @@
     <div class="opening-card">
       <svg class="garland garland-card" aria-hidden="true"><rect width="100%" height="100%" fill="url(#garland)"/></svg>
       <p class="urdu urdu-heading foil">دعوت نامہ</p>
-      <p class="translation-line">An Invitation</p>
+      <p class="en-only translation-line">An Invitation</p>
       <div class="seal" aria-hidden="true"><span>T</span><i>&amp;</i><span>A</span></div>
+      <p class="greeting" id="greeting" hidden></p>
       <p class="eyebrow">You are invited to the Walima of</p>
       <h1 class="script foil">Tashkeen <span class="amp">&amp;</span> Anusha</h1>
       <p class="opening-date">29 · 12 · 2026</p>
@@ -52,31 +61,32 @@
         <svg class="kairi-corner br" viewBox="0 0 64 64" aria-hidden="true"><use href="#kairi"/></svg>
 
         <p class="bismillah foil" lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-        <p class="translation-line">In the name of Allah, the Most Gracious, the Most Merciful</p>
+        <p class="en-only translation-line">In the name of Allah, the Most Gracious, the Most Merciful</p>
         <p class="urdu urdu-title foil reveal" lang="ur" dir="rtl">دعوتِ ولیمہ</p>
-        <p class="translation-line reveal">Dawat-e-Walima · The Walima Invitation</p>
+        <p class="en-only translation-line reveal">Dawat-e-Walima · The Walima Invitation</p>
         <svg class="divider reveal" viewBox="0 0 200 30" aria-hidden="true"><use href="#kairi-divider"/></svg>
-        <p class="lead reveal">With the blessings of Allah ﷻ and the duas of our elders,<br>we request the pleasure of your company at the</p>
-        <h2 class="script title foil reveal">Walima Reception</h2>
-        <p class="lead reveal">celebrating the blessed union of</p>
+        <p class="lead reveal" data-ur="اللہ تعالیٰ کے فضل و کرم اور بزرگوں کی دعاؤں کے ساتھ<br>آپ کو تقریبِ ولیمہ میں شرکت کی دعوت دی جاتی ہے">With the blessings of Allah ﷻ and the duas of our elders,<br>we request the pleasure of your company at the</p>
+        <h2 class="script title foil reveal" data-ur="تقریبِ ولیمہ">Walima Reception</h2>
+        <p class="lead reveal" data-ur="بسلسلۂ شادی خانہ آبادی">celebrating the blessed union of</p>
         <div class="couple reveal">
           <p class="name script foil">Tashkeen</p>
           <p class="amp-line"><span>&amp;</span></p>
           <p class="name script foil">Anusha</p>
         </div>
+        <p class="hosts reveal" id="hosts" hidden></p>
 
         <div class="date-block reveal">
-          <div class="date-side">Tuesday</div>
+          <div class="date-side" data-ur="منگل">Tuesday</div>
           <div class="date-main">
-            <span class="month">December</span>
+            <span class="month" data-ur="دسمبر">December</span>
             <span class="day foil">29</span>
             <span class="year">2026</span>
           </div>
-          <div class="date-side">8:00 PM</div>
+          <div class="date-side" data-ur="رات ۸ بجے">8:00 PM</div>
         </div>
 
-        <p class="venue-line reveal">Zam Zam Lawn · Thatta</p>
-        <p class="inshallah reveal">— Insha’Allah —</p>
+        <p class="venue-line reveal" data-ur="زم زم لان · ٹھٹھہ">Zam Zam Lawn · Thatta</p>
+        <p class="inshallah reveal" data-ur="— ان شاء اللہ —">— Insha’Allah —</p>
       </div>
     </section>
 
@@ -88,51 +98,55 @@
         دعوتِ ولیمہ میں آپ کی شرکت<br>
         ہمارے لیے باعثِ مسرت و افتخار ہوگی
       </p>
-      <p class="translation reveal">“On the joyous occasion of the wedding celebrations,<br>your presence at the Walima would be a matter of great joy and honour for us.”</p>
+      <p class="en-only translation reveal">“On the joyous occasion of the wedding celebrations,<br>your presence at the Walima would be a matter of great joy and honour for us.”</p>
       <p class="urdu urdu-small foil reveal" lang="ur" dir="rtl">آپ کی آمد کے منتظر</p>
-      <p class="translation-line reveal">Eagerly awaiting your arrival</p>
+      <p class="en-only translation-line reveal">Eagerly awaiting your arrival</p>
     </section>
 
     <!-- Countdown -->
     <section class="section countdown-section">
-      <p class="eyebrow">Counting down to the celebration</p>
+      <p class="eyebrow" data-ur="تقریب میں باقی وقت">Counting down to the celebration</p>
       <div class="countdown" id="countdown" aria-live="polite">
-        <div class="unit"><span class="foil" id="cd-days">00</span><small>Days</small></div>
-        <div class="unit"><span class="foil" id="cd-hours">00</span><small>Hours</small></div>
-        <div class="unit"><span class="foil" id="cd-mins">00</span><small>Minutes</small></div>
-        <div class="unit"><span class="foil" id="cd-secs">00</span><small>Seconds</small></div>
+        <div class="unit"><span class="foil" id="cd-days">00</span><small data-ur="دن">Days</small></div>
+        <div class="unit"><span class="foil" id="cd-hours">00</span><small data-ur="گھنٹے">Hours</small></div>
+        <div class="unit"><span class="foil" id="cd-mins">00</span><small data-ur="منٹ">Minutes</small></div>
+        <div class="unit"><span class="foil" id="cd-secs">00</span><small data-ur="سیکنڈ">Seconds</small></div>
       </div>
-      <p class="countdown-done" id="countdownDone" hidden>The celebration has begun — Alhamdulillah!</p>
+      <p class="countdown-done" id="countdownDone" data-ur="تقریب کا آغاز ہو چکا ہے — الحمدللہ!" hidden>The celebration has begun — Alhamdulillah!</p>
     </section>
 
     <!-- Details -->
     <section class="section details">
-      <h3 class="section-title foil">Event Details</h3>
+      <h3 class="section-title foil" data-ur="تقریب کی تفصیل">Event Details</h3>
       <div class="cards">
         <article class="card reveal">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
           <p class="urdu card-urdu foil" lang="ur">تاریخ</p>
           <h4>Date</h4>
-          <p>Tuesday<br>29 December 2026</p>
+          <p data-ur="منگل<br>29 دسمبر 2026">Tuesday<br>29 December 2026</p>
         </article>
         <article class="card reveal">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
           <p class="urdu card-urdu foil" lang="ur">وقت</p>
           <h4>Time</h4>
-          <p>8:00 PM<br>Dinner to follow</p>
+          <p data-ur="رات 8 بجے<br>بعد ازاں طعام">8:00 PM<br>Dinner to follow</p>
         </article>
         <article class="card reveal">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
           <p class="urdu card-urdu foil" lang="ur">مقام</p>
           <h4>Venue</h4>
-          <p>Zam Zam Lawn<br>Thatta, Sindh</p>
+          <p data-ur="زم زم لان<br>ٹھٹھہ، سندھ">Zam Zam Lawn<br>Thatta, Sindh</p>
         </article>
       </div>
 
       <div class="actions">
         <a class="btn btn-solid" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/search/?api=1&query=Zam+Zam+Lawn+Thatta">Get Directions</a>
-        <button class="btn btn-outline" id="calendarBtn" type="button">Add to Calendar</button>
+           href="https://www.google.com/maps/search/?api=1&query=Zam+Zam+Lawn+Thatta" data-ur="راستہ دیکھیں">Get Directions</a>
+        <button class="btn btn-outline" id="calendarBtn" type="button" data-ur="کیلنڈر میں شامل کریں">Add to Calendar</button>
+        <a class="btn btn-whatsapp" id="rsvpBtn" target="_blank" rel="noopener" href="#" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M8.8 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.1.3 0 .5a6 6 0 0 0 2.9 2.6c.2.1.4 0 .5-.1l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5 0 .9-.7 1.7-1.6 1.8-1 .1-2.6-.2-4.4-1.8-1.7-1.5-2.6-3.3-2.6-4.3 0-.6.2-1.3.6-1.9z" fill="currentColor" stroke="none"/></svg>
+          <span data-ur="واٹس ایپ پر شرکت کی تصدیق کریں">RSVP on WhatsApp</span>
+        </a>
       </div>
     </section>
 
@@ -149,9 +163,9 @@
     <section class="section dua">
       <svg class="divider" viewBox="0 0 200 30" aria-hidden="true"><use href="#kairi-divider"/></svg>
       <p class="arabic foil" lang="ar" dir="rtl">بَارَكَ ٱللَّٰهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
-      <p class="translation">“May Allah bless you both, shower His blessings upon you,<br>and unite you both in goodness.”</p>
-      <p class="closing">Your presence and duas will be the greatest gift.</p>
-      <p class="script signoff foil">With love &amp; duas</p>
+      <p class="translation" data-ur="“اللہ تم دونوں کو برکت دے، تم پر برکتیں نازل فرمائے<br>اور تم دونوں کو خیر و بھلائی پر جمع رکھے۔”">“May Allah bless you both, shower His blessings upon you,<br>and unite you both in goodness.”</p>
+      <p class="closing" data-ur="آپ کی شرکت اور دعائیں ہمارے لیے سب سے قیمتی تحفہ ہوں گی۔">Your presence and duas will be the greatest gift.</p>
+      <p class="script signoff foil" data-ur="محبت اور دعاؤں کے ساتھ">With love &amp; duas</p>
       <p class="from">Tashkeen &amp; Anusha</p>
     </section>
   </main>
@@ -162,6 +176,15 @@
   </footer>
 
   <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <!-- Floating controls (shown after the card is opened) -->
+  <div class="controls" id="controls" hidden>
+    <button class="ctrl" id="langBtn" type="button" aria-label="Read in Urdu"><span class="ctrl-ur">اردو</span></button>
+    <button class="ctrl" id="musicBtn" type="button" aria-label="Pause music" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+    </button>
+  </div>
+  <audio id="music" loop preload="none"></audio>
 
   <!-- Shared SVG art -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
