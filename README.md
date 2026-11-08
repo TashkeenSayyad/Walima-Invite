@@ -4,7 +4,7 @@ A white-themed, single-page invitation website for the Walima reception.
 
 - **Date:** Tuesday, 29 December 2026
 - **Time:** 8:00 PM (PKT)
-- **Venue:** Zam Zam Diamond Hall, Thatta
+- **Venue:** Zam Zam Lawn, Thatta
 - **Couple:** Tashkeen & Anusha
 
 ## Features

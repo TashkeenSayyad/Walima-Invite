@@ -3,7 +3,7 @@ const EVENT = {
   title: "Walima Reception · Tashkeen & Anusha",
   start: new Date("2026-12-29T20:00:00+05:00"),
   end: new Date("2026-12-29T23:30:00+05:00"),
-  location: "Zam Zam Diamond Hall, Thatta, Sindh, Pakistan",
+  location: "Zam Zam Lawn, Thatta, Sindh, Pakistan",
   description: "You are cordially invited to the Walima reception of Tashkeen & Anusha. Dinner to follow.",
 };
 
