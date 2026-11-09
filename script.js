@@ -9,7 +9,7 @@ const CONFIG = {
   // Optional hosts line under the names, e.g. "Mr & Mrs Sayyad".
   // Leave "" to hide it.
   hosts: "",
-  hostsUrdu: "",
+  hostsSindhi: "",
 
   // Background music file placed next to index.html (e.g. "music.mp3").
   // The music button only appears if this file exists and loads.
@@ -46,7 +46,7 @@ const hostsEl = $("hosts");
 if (CONFIG.hosts) {
   hostsEl.innerHTML = "";
   hostsEl.append("Hosted by ", Object.assign(document.createElement("span"), { textContent: CONFIG.hosts }));
-  if (CONFIG.hostsUrdu) hostsEl.dataset.ur = `میزبان: ${CONFIG.hostsUrdu}`;
+  if (CONFIG.hostsSindhi) hostsEl.dataset.sd = `ميزبان: ${CONFIG.hostsSindhi}`;
   hostsEl.hidden = false;
 }
 
@@ -96,27 +96,43 @@ $("openBtn").addEventListener("click", () => {
   showerPetals();
 });
 
-/* ---------- Urdu / English toggle ---------- */
+/* ---------- Sindhi / English toggle ---------- */
 const langBtn = $("langBtn");
-const translatable = document.querySelectorAll("[data-ur]");
 function setLang(lang) {
-  const ur = lang === "ur";
-  document.documentElement.classList.toggle("lang-ur", ur);
-  document.querySelectorAll("[data-ur]").forEach((el) => {
+  const sd = lang === "sd";
+  document.documentElement.classList.toggle("lang-sd", sd);
+  document.querySelectorAll("[data-sd]").forEach((el) => {
     if (el.dataset.en === undefined) el.dataset.en = el.innerHTML;
-    el.innerHTML = ur ? el.dataset.ur : el.dataset.en;
-    el.classList.toggle("ur", ur);
-    if (ur) { el.setAttribute("lang", "ur"); el.setAttribute("dir", "rtl"); }
+    el.innerHTML = sd ? el.dataset.sd : el.dataset.en;
+    el.classList.toggle("sd-on", sd);
+    if (sd) { el.setAttribute("lang", "sd"); el.setAttribute("dir", "rtl"); }
     else { el.removeAttribute("lang"); el.removeAttribute("dir"); }
   });
-  langBtn.innerHTML = ur ? '<span class="ctrl-en">EN</span>' : '<span class="ctrl-ur">اردو</span>';
-  langBtn.setAttribute("aria-label", ur ? "Read in English" : "Read in Urdu");
+  langBtn.innerHTML = sd ? '<span class="ctrl-en">EN</span>' : '<span class="ctrl-sd">سنڌي</span>';
+  langBtn.setAttribute("aria-label", sd ? "Read in English" : "Read in Sindhi");
   store.set("walima-lang", lang);
 }
 langBtn.addEventListener("click", () =>
-  setLang(document.documentElement.classList.contains("lang-ur") ? "en" : "ur"));
+  setLang(document.documentElement.classList.contains("lang-sd") ? "en" : "sd"));
 const startLang = params.get("lang") || store.get("walima-lang");
-if (startLang === "ur" && translatable.length) setLang("ur");
+if (startLang === "sd" || startLang === "ur") setLang("sd");
+
+/* ---------- Gentle parallax on lanterns, flower strings & watermark ---------- */
+const layers = [...document.querySelectorAll(".parallax")];
+if (layers.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    layers.forEach((el) => {
+      const box = el.parentElement.getBoundingClientRect();
+      if (box.bottom < -200 || box.top > innerHeight + 200) return;
+      const shift = -box.top * parseFloat(el.dataset.speed || 0);
+      el.style.translate = `0 ${shift.toFixed(1)}px`;
+    });
+  };
+  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
+}
 
 /* ---------- Rose, marigold & gold-flake shower ---------- */
 function showerPetals() {

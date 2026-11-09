@@ -18,7 +18,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital@0;1&family=Great+Vibes&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,13 +28,13 @@
     <div class="door door-right" aria-hidden="true"><div class="door-panel"></div><span class="door-ring"></span></div>
     <div class="opening-card">
       <svg class="garland garland-card" aria-hidden="true"><rect width="100%" height="100%" fill="url(#garland)"/></svg>
-      <p class="urdu urdu-heading foil">دعوت نامہ</p>
+      <p class="sd sd-heading foil" lang="sd" dir="rtl">دعوت نامو</p>
       <p class="en-only translation-line">An Invitation</p>
       <svg class="monogram" viewBox="0 0 200 200" role="img" aria-label="T and A monogram"><use href="#monogram"/></svg>
       <p class="greeting" id="greeting" hidden></p>
       <p class="eyebrow">You are invited to the Walima of</p>
       <h1 class="script foil">Tashkeen <span class="amp">&amp;</span> Anusha</h1>
-      <p class="sindhi sindhi-small foil" lang="sd" dir="rtl">تشڪين ۽ انوشا</p>
+      <p class="sd sindhi-small foil" lang="sd" dir="rtl">تشڪين ۽ انوشا</p>
       <p class="opening-date">29 · 12 · 2026</p>
       <button class="btn btn-solid" id="openBtn" type="button">Open Invitation</button>
     </div>
@@ -47,18 +47,18 @@
     <!-- Hero -->
     <section class="hero">
       <!-- Hanging marigold strings -->
-      <div class="laris laris-left" aria-hidden="true">
+      <div class="laris laris-left parallax" data-speed=".18" aria-hidden="true">
         <svg style="height:52%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
         <svg style="height:34%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
         <svg style="height:20%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
       </div>
-      <div class="laris laris-right" aria-hidden="true">
+      <div class="laris laris-right parallax" data-speed=".18" aria-hidden="true">
         <svg style="height:20%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
         <svg style="height:34%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
         <svg style="height:52%"><rect width="100%" height="100%" fill="url(#lari)"/></svg>
       </div>
 
-      <div class="lamps" aria-hidden="true">
+      <div class="lamps parallax" data-speed=".35" aria-hidden="true">
         <div class="lamp" style="--x:9%;--len:90px;--d:0s"><svg viewBox="0 0 40 72"><use href="#lantern"/></svg></div>
         <div class="lamp" style="--x:19%;--len:40px;--d:-1.4s"><svg viewBox="0 0 40 72"><use href="#lantern"/></svg></div>
         <div class="lamp" style="--x:81%;--len:40px;--d:-.7s"><svg viewBox="0 0 40 72"><use href="#lantern"/></svg></div>
@@ -72,124 +72,131 @@
 
         <p class="bismillah foil" lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
         <p class="en-only translation-line">In the name of Allah, the Most Gracious, the Most Merciful</p>
-        <p class="urdu urdu-title foil reveal" lang="ur" dir="rtl">دعوتِ ولیمہ</p>
-        <p class="en-only translation-line reveal">Dawat-e-Walima · The Walima Invitation</p>
+        <p class="sd sd-title foil reveal" lang="sd" dir="rtl">وليمي جي دعوت</p>
+        <p class="en-only translation-line reveal">Walime ji Dawat · The Walima Invitation</p>
         <svg class="divider reveal" viewBox="0 0 200 30" aria-hidden="true"><use href="#kairi-divider"/></svg>
-        <p class="lead reveal" data-ur="اللہ تعالیٰ کے فضل و کرم اور بزرگوں کی دعاؤں کے ساتھ<br>آپ کو تقریبِ ولیمہ میں شرکت کی دعوت دی جاتی ہے">With the blessings of Allah ﷻ and the duas of our elders,<br>we request the pleasure of your company at the</p>
-        <h2 class="script title foil reveal" data-ur="تقریبِ ولیمہ">Walima Reception</h2>
-        <p class="lead reveal" data-ur="بسلسلۂ شادی خانہ آبادی">celebrating the blessed union of</p>
+        <p class="lead reveal" data-sd="الله تعاليٰ جي فضل ۽ وڏن جي دعائن سان<br>اوهان کي وليمي جي دعوت ڏجي ٿي">With the blessings of Allah <span class="sym">ﷻ</span> and the duas of our elders,<br>we request the pleasure of your company</p>
+        <p class="title reveal" data-sd="وليمي جي تقريب">at the Walima Reception of</p>
+
         <div class="couple reveal">
           <p class="name script foil">Tashkeen</p>
           <p class="amp-line"><span>&amp;</span></p>
           <p class="name script foil">Anusha</p>
-          <p class="sindhi sindhi-names foil" lang="sd" dir="rtl">تشڪين ۽ انوشا</p>
-          <span class="sparkle" style="--x:12%;--y:8%;--d:0s"></span>
-          <span class="sparkle" style="--x:84%;--y:18%;--d:1.1s"></span>
-          <span class="sparkle" style="--x:22%;--y:52%;--d:2.3s"></span>
-          <span class="sparkle" style="--x:78%;--y:60%;--d:.6s"></span>
-          <span class="sparkle" style="--x:50%;--y:2%;--d:1.8s"></span>
-          <span class="sparkle" style="--x:66%;--y:88%;--d:2.9s"></span>
+          <p class="sd sindhi-names foil" lang="sd" dir="rtl">تشڪين ۽ انوشا</p>
+          <span class="sparkle" style="--x:10%;--y:6%;--d:0s"></span>
+          <span class="sparkle" style="--x:86%;--y:16%;--d:1.1s"></span>
+          <span class="sparkle" style="--x:20%;--y:50%;--d:2.3s"></span>
+          <span class="sparkle" style="--x:80%;--y:58%;--d:.6s"></span>
+          <span class="sparkle" style="--x:50%;--y:0%;--d:1.8s"></span>
+          <span class="sparkle" style="--x:68%;--y:90%;--d:2.9s"></span>
         </div>
         <p class="hosts reveal" id="hosts" hidden></p>
 
         <div class="date-block reveal">
-          <div class="date-side" data-ur="منگل">Tuesday</div>
+          <div class="date-side" data-sd="اڱارو">Tuesday</div>
           <div class="date-main">
-            <span class="month" data-ur="دسمبر">December</span>
+            <span class="month" data-sd="ڊسمبر">December</span>
             <span class="day foil">29</span>
             <span class="year">2026</span>
           </div>
-          <div class="date-side" data-ur="رات ۸ بجے">8:00 PM</div>
+          <div class="date-side" data-sd="رات 8 وڳي">8:00 PM</div>
         </div>
 
-        <p class="venue-line reveal" data-ur="زم زم لان · ٹھٹھہ">Zam Zam Lawn · Thatta</p>
-        <p class="inshallah reveal" data-ur="— ان شاء اللہ —">— Insha’Allah —</p>
+        <p class="venue-line reveal" data-sd="زم زم لان · ٺٽو">Zam Zam Lawn · Thatta</p>
+        <p class="inshallah reveal" data-sd="— ان شاءَ الله —">— Insha’Allah —</p>
       </div>
     </section>
 
-    <!-- Urdu invitation -->
-    <section class="section urdu-section">
+    <!-- Sindhi invitation -->
+    <section class="section sd-section edge-top" style="--edge:#fcf6e6">
+      <svg class="vine vine-left" viewBox="0 0 60 400" aria-hidden="true"><use href="#vine"/></svg>
+      <svg class="vine vine-right" viewBox="0 0 60 400" aria-hidden="true"><use href="#vine"/></svg>
       <svg class="divider" viewBox="0 0 200 30" aria-hidden="true"><use href="#kairi-divider"/></svg>
-      <p class="urdu urdu-body reveal" lang="ur" dir="rtl">
-        شادی خانہ آبادی کی پُرمسرت تقریب کے موقع پر<br>
-        دعوتِ ولیمہ میں آپ کی شرکت<br>
-        ہمارے لیے باعثِ مسرت و افتخار ہوگی
+      <p class="sd sd-body reveal" lang="sd" dir="rtl">
+        شاديءَ جي خوشين ڀريي موقعي تي<br>
+        وليمي جي دعوت ۾ اوهان جي شرڪت<br>
+        اسان لاءِ خوشي ۽ فخر جو باعث ٿيندي
       </p>
       <p class="en-only translation reveal">“On the joyous occasion of the wedding celebrations,<br>your presence at the Walima would be a matter of great joy and honour for us.”</p>
-      <p class="urdu urdu-small foil reveal" lang="ur" dir="rtl">آپ کی آمد کے منتظر</p>
+      <p class="sd sd-small foil reveal" lang="sd" dir="rtl">اوهان جي آمد جا منتظر</p>
       <p class="en-only translation-line reveal">Eagerly awaiting your arrival</p>
     </section>
 
     <!-- Countdown -->
     <section class="section countdown-section">
-      <p class="eyebrow" data-ur="تقریب میں باقی وقت">Counting down to the celebration</p>
+      <p class="eyebrow" data-sd="تقريب ۾ باقي وقت">Counting down to the celebration</p>
       <div class="countdown" id="countdown" aria-live="polite">
-        <div class="unit"><span class="foil" id="cd-days">00</span><small data-ur="دن">Days</small></div>
-        <div class="unit"><span class="foil" id="cd-hours">00</span><small data-ur="گھنٹے">Hours</small></div>
-        <div class="unit"><span class="foil" id="cd-mins">00</span><small data-ur="منٹ">Minutes</small></div>
-        <div class="unit"><span class="foil" id="cd-secs">00</span><small data-ur="سیکنڈ">Seconds</small></div>
+        <div class="unit"><span class="foil" id="cd-days">00</span><small data-sd="ڏينهن">Days</small></div>
+        <div class="unit"><span class="foil" id="cd-hours">00</span><small data-sd="ڪلاڪ">Hours</small></div>
+        <div class="unit"><span class="foil" id="cd-mins">00</span><small data-sd="منٽ">Minutes</small></div>
+        <div class="unit"><span class="foil" id="cd-secs">00</span><small data-sd="سيڪنڊ">Seconds</small></div>
       </div>
-      <p class="countdown-done" id="countdownDone" data-ur="تقریب کا آغاز ہو چکا ہے — الحمدللہ!" hidden>The celebration has begun — Alhamdulillah!</p>
+      <p class="countdown-done" id="countdownDone" data-sd="تقريب شروع ٿي چڪي آهي — الحمدلله!" hidden>The celebration has begun — Alhamdulillah!</p>
     </section>
 
     <!-- Details -->
     <section class="section details">
-      <h3 class="section-title foil" data-ur="تقریب کی تفصیل">Event Details</h3>
-      <div class="cards">
-        <article class="card reveal">
+      <h3 class="section-title foil" data-sd="تقريب جو تفصيل">Event Details</h3>
+      <div class="details-card reveal">
+        <div class="detail">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-          <p class="urdu card-urdu foil" lang="ur">تاریخ</p>
-          <h4>Date</h4>
-          <p data-ur="منگل<br>29 دسمبر 2026">Tuesday<br>29 December 2026</p>
-        </article>
-        <article class="card reveal">
+          <h4><span class="sd-label" lang="sd">تاريخ</span>Date</h4>
+          <p data-sd="اڱارو<br>29 ڊسمبر 2026">Tuesday<br>29 December 2026</p>
+        </div>
+        <div class="detail">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <p class="urdu card-urdu foil" lang="ur">وقت</p>
-          <h4>Time</h4>
-          <p data-ur="رات 8 بجے<br>بعد ازاں طعام">8:00 PM<br>Dinner to follow</p>
-        </article>
-        <article class="card reveal">
+          <h4><span class="sd-label" lang="sd">وقت</span>Time</h4>
+          <p data-sd="رات 8 وڳي<br>ان کان پوءِ ماني">8:00 PM<br>Dinner to follow</p>
+        </div>
+        <div class="detail">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-          <p class="urdu card-urdu foil" lang="ur">مقام</p>
-          <h4>Venue</h4>
-          <p data-ur="زم زم لان<br>ٹھٹھہ، سندھ">Zam Zam Lawn<br>Thatta, Sindh</p>
-        </article>
+          <h4><span class="sd-label" lang="sd">هنڌ</span>Venue</h4>
+          <p data-sd="زم زم لان<br>ٺٽو، سنڌ">Zam Zam Lawn<br>Thatta, Sindh</p>
+        </div>
       </div>
 
       <div class="actions">
         <a class="btn btn-solid" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/search/?api=1&query=Zam+Zam+Lawn+Thatta" data-ur="راستہ دیکھیں">Get Directions</a>
-        <button class="btn btn-outline" id="calendarBtn" type="button" data-ur="کیلنڈر میں شامل کریں">Add to Calendar</button>
+           href="https://www.google.com/maps/search/?api=1&query=Zam+Zam+Lawn+Thatta" data-sd="رستو ڏسو">Get Directions</a>
+        <button class="btn btn-outline" id="calendarBtn" type="button" data-sd="ڪئلينڊر ۾ شامل ڪريو">Add to Calendar</button>
         <a class="btn btn-whatsapp" id="rsvpBtn" target="_blank" rel="noopener" href="#" hidden>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M8.8 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.1.3 0 .5a6 6 0 0 0 2.9 2.6c.2.1.4 0 .5-.1l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5 0 .9-.7 1.7-1.6 1.8-1 .1-2.6-.2-4.4-1.8-1.7-1.5-2.6-3.3-2.6-4.3 0-.6.2-1.3.6-1.9z" fill="currentColor" stroke="none"/></svg>
-          <span data-ur="واٹس ایپ پر شرکت کی تصدیق کریں">RSVP on WhatsApp</span>
+          <span data-sd="واٽس ايپ تي شرڪت جي تصديق ڪريو">RSVP on WhatsApp</span>
         </a>
       </div>
     </section>
 
     <!-- Map -->
     <section class="section map-section">
-      <div class="map-wrap reveal">
-        <iframe title="Map of Zam Zam Lawn, Thatta" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://maps.google.com/maps?q=Zam%20Zam%20Lawn%20Thatta&z=14&output=embed"></iframe>
+      <div class="map-frame reveal">
+        <svg class="finial map-finial" viewBox="0 0 60 60" aria-hidden="true"><use href="#finial"/></svg>
+        <div class="map-wrap">
+          <iframe title="Map of Zam Zam Lawn, Thatta" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Zam%20Zam%20Lawn%20Thatta&z=14&output=embed"></iframe>
+        </div>
+        <a class="map-label" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Zam+Zam+Lawn+Thatta">
+          <svg viewBox="0 0 40 72" aria-hidden="true"><use href="#lantern"/></svg>
+          <span data-sd="زم زم لان · ٺٽو">Zam Zam Lawn · Thatta</span>
+        </a>
       </div>
     </section>
 
     <!-- Dua -->
-    <section class="section dua">
-      <svg class="watermark" viewBox="0 0 200 200" aria-hidden="true"><use href="#monogram"/></svg>
+    <section class="section dua edge-top" style="--edge:#ffffff">
+      <svg class="watermark parallax" data-speed="-.08" viewBox="0 0 200 200" aria-hidden="true"><use href="#monogram"/></svg>
       <svg class="divider" viewBox="0 0 200 30" aria-hidden="true"><use href="#kairi-divider"/></svg>
       <p class="arabic foil" lang="ar" dir="rtl">بَارَكَ ٱللَّٰهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
-      <p class="translation" data-ur="“اللہ تم دونوں کو برکت دے، تم پر برکتیں نازل فرمائے<br>اور تم دونوں کو خیر و بھلائی پر جمع رکھے۔”">“May Allah bless you both, shower His blessings upon you,<br>and unite you both in goodness.”</p>
-      <p class="closing" data-ur="آپ کی شرکت اور دعائیں ہمارے لیے سب سے قیمتی تحفہ ہوں گی۔">Your presence and duas will be the greatest gift.</p>
-      <p class="script signoff foil" data-ur="محبت اور دعاؤں کے ساتھ">With love &amp; duas</p>
+      <p class="translation" data-sd="“الله اوهان ٻنهي کي برڪت ڏئي، اوهان تي برڪتون نازل ڪري<br>۽ اوهان ٻنهي کي ڀلائيءَ تي گڏ رکي.”">“May Allah bless you both, shower His blessings upon you,<br>and unite you both in goodness.”</p>
+      <p class="closing" data-sd="اوهان جي شرڪت ۽ دعائون اسان لاءِ سڀ کان قيمتي تحفو آهن.">Your presence and duas will be the greatest gift.</p>
+      <p class="script signoff foil" data-sd="پيار ۽ دعائن سان">With love &amp; duas</p>
       <p class="from">Tashkeen &amp; Anusha</p>
     </section>
   </main>
 
   <footer class="footer">
     <svg class="garland garland-bottom" aria-hidden="true"><rect width="100%" height="100%" fill="url(#garland)"/></svg>
+    <div class="ajrak-strip" aria-hidden="true"></div>
     <p>Tashkeen &amp; Anusha · 29.12.2026 · Thatta</p>
   </footer>
 
@@ -197,7 +204,7 @@
 
   <!-- Floating controls (shown after the card is opened) -->
   <div class="controls" id="controls" hidden>
-    <button class="ctrl" id="langBtn" type="button" aria-label="Read in Urdu"><span class="ctrl-ur">اردو</span></button>
+    <button class="ctrl" id="langBtn" type="button" aria-label="Read in Sindhi"><span class="ctrl-sd">سنڌي</span></button>
     <button class="ctrl" id="musicBtn" type="button" aria-label="Pause music" hidden>
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
     </button>
@@ -343,6 +350,20 @@
       <path d="M14 50h12l-3 6h-6z" fill="url(#goldBead)" stroke="#8f6a22" stroke-width=".6"/>
       <path d="M20 56v8" stroke="#b8892e" stroke-width="1"/>
       <path d="M20 64l3 4-3 4-3-4z" fill="#8f1d2c"/>
+    </symbol>
+
+    <!-- Mehndi vine for section sides -->
+    <symbol id="vine" viewBox="0 0 60 400">
+      <path d="M30 0C10 50 50 100 30 150S10 250 30 300S50 370 30 400" fill="none" stroke="url(#goldLine)" stroke-width="1.2"/>
+      <g fill="none" stroke="url(#goldLine)" stroke-width="1">
+        <path d="M33 40c10-8 22-6 24 4c-10 4-18 2-24-4z"/><path d="M27 95c-10-8-22-6-24 4c10 4 18 2 24-4z"/>
+        <path d="M30 150c10-8 22-6 24 4c-10 4-18 2-24-4z"/><path d="M26 205c-10-8-22-6-24 4c10 4 18 2 24-4z"/>
+        <path d="M31 260c10-8 22-6 24 4c-10 4-18 2-24-4z"/><path d="M28 320c-10-8-22-6-24 4c10 4 18 2 24-4z"/>
+        <path d="M32 370c10-8 22-6 24 4c-10 4-18 2-24-4z"/>
+      </g>
+      <g fill="#c49a3c"><circle cx="30" cy="0" r="2"/><circle cx="18" cy="70" r="1.6"/><circle cx="44" cy="125" r="1.6"/>
+        <circle cx="16" cy="180" r="1.6"/><circle cx="44" cy="235" r="1.6"/><circle cx="16" cy="290" r="1.6"/><circle cx="42" cy="345" r="1.6"/><circle cx="30" cy="400" r="2"/></g>
+      <use href="#genda" x="30" y="150" transform="scale(1)"/><use href="#genda" x="30" y="300"/>
     </symbol>
 
     <!-- Dome finial for the arch -->

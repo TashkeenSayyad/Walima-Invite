@@ -9,8 +9,8 @@ A white-themed, single-page invitation website for the Walima reception.
 
 ## Features
 
-- Premium gold-foil styling with English translations under all Arabic & Urdu text
-- Desi shaadi-card styling: marigold garlands, Mughal arch, paisley (kairi) motifs, jaali pattern, Urdu text
+- Premium gold-foil styling with English translations under all Arabic & Sindhi text
+- Desi shaadi-card styling: marigold garlands, Mughal arch, paisley (kairi) motifs, jaali pattern, Ajrak borders, Sindhi text
 - "Open Invitation" card with a gold T ✦ A laurel-wreath monogram; palace doors swing open, followed by a rose, marigold & gold-flake shower
 - Couple's names in Sindhi calligraphy (تشڪين ۽ انوشا)
 - Textured gold-foil lettering with twinkling sparkles around the names
@@ -22,7 +22,8 @@ A white-themed, single-page invitation website for the Walima reception.
 - Event detail cards, Google Maps directions and embedded map
 - "Add to Calendar" button (downloads an `.ics` file with a 1-day reminder)
 - Personal greeting per guest via the link (`?to=Ahmed+Family`)
-- Urdu / English switch (floating button, remembered per visitor; `?lang=ur` opens in Urdu)
+- Sindhi / English switch (floating button, remembered per visitor; `?lang=sd` opens in Sindhi)
+- Names as the focal point, compact event-details card, arch-framed map, scalloped section edges, gentle parallax
 - WhatsApp RSVP button with a pre-filled message (after setting a number)
 - Optional hosts line and background music
 - WhatsApp/social link preview image (`og-image.png`) and gold favicon
@@ -47,7 +48,7 @@ Open `script.js`; the `CONFIG` block at the top controls:
 | Setting | What it does |
 |---|---|
 | `rsvpWhatsApp` | WhatsApp number for RSVPs, digits only in international format (e.g. `923001234567`). Empty hides the button. |
-| `hosts` / `hostsUrdu` | Optional "Hosted by …" line under the names (and its Urdu version). Empty hides it. |
+| `hosts` / `hostsSindhi` | Optional "Hosted by …" line under the names (and its Sindhi version). Empty hides it. |
 | `music` | Audio file next to `index.html` (default `music.mp3`). Add the file to enable the music button; music starts when the card is opened. |
 
 ## Personal links for each guest
@@ -58,7 +59,7 @@ Add `?to=` with the guest's name to the link (use `+` for spaces):
 https://tashkeensayyad.github.io/Walima-Invite/?to=Ahmed+Family
 ```
 
-The welcome card then says "Dear Ahmed Family", and the RSVP message includes the name. Add `&lang=ur` to open the invitation in Urdu.
+The welcome card then says "Dear Ahmed Family", and the RSVP message includes the name. Add `&lang=sd` to open the invitation in Sindhi.
 
 ## Link preview image
 
@@ -66,4 +67,4 @@ The welcome card then says "Dear Ahmed Family", and the RSVP message includes th
 
 ## Customising
 
-Wording and colours live in `index.html` and `styles.css` (colour tokens at the top under `:root`). Urdu versions of texts are in the `data-ur` attributes. Event times are in `script.js`.
+Wording and colours live in `index.html` and `styles.css` (colour tokens at the top under `:root`). Sindhi versions of texts are in the `data-sd` attributes. Event times are in `script.js`.
